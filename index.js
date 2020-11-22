@@ -65,7 +65,7 @@ let openModal = () => {
     [element("p", { id: "p1" }), element("img", { src: image }), element("p", { id: "p2" })]
   )
   document.querySelector(".nice-button-container").appendChild(modal);
-  document.getElementById("p1").innerHTML = "You got this!";
+  document.getElementById("p1").innerHTML = "You've Got This!";
   document.getElementById("p2").innerHTML = "You " + randomAdjectives[randomAdjectiveIndex] + " " + randomWords[randomIndex] + "!";
 };
 

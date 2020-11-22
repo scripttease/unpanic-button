@@ -51,6 +51,7 @@ body {
 .nice-button-modal {
   position: absolute;
   background-color: #1e0948;
+  /* background-color: #4f0168; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -76,6 +77,10 @@ body {
   border-radius: 5px;
   margin: 1em;
   font-family:'Roboto',sans-serif;
+  font-weight: 299;
+  /* color: #8822ac; */
+  color: #dd7cff;
+  /* color: #bc5fdc; */
 }
 
 .bouncy {
