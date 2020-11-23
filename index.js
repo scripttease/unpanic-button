@@ -50,23 +50,21 @@ let removeElement = (event) => {
 
 let openModal = () => {
   let randomWords = ["Squid", "Nautilus", "Cephalopod", "Octopus"]
-  let arrayLength = randomWords.length;
-  let randomIndex = Math.floor(Math.random() * arrayLength);
   let randomAdjectives = ["Glorius", "Intrepid", "Curious", "Dashing"]
-  let adjectiveArrayLength = randomAdjectives.length;
-  let randomAdjectiveIndex = Math.floor(Math.random() * adjectiveArrayLength);
-  let paragraph = document.getElementById("p");
   // let text = document.createTextNode("This just got added");
+  let message = "You " + getRandom(randomAdjectives) + " " + getRandom(randomWords) + "!";
   let image = getRandom(images);
   let modal = element(
     "div",
     { class: "nice-button-modal" },
     { click: removeElement },
-    [element("p", { id: "p1" }), element("img", { src: image }), element("p", { id: "p2" })]
+    [
+      element("p", {}, {}, [text("You've Got This!")]),
+      element("img", { src: image }),
+      element("p", {}, {}, [text(message)]),
+    ]
   )
   document.querySelector(".nice-button-container").appendChild(modal);
-  document.getElementById("p1").innerHTML = "You've Got This!";
-  document.getElementById("p2").innerHTML = "You " + randomAdjectives[randomAdjectiveIndex] + " " + randomWords[randomIndex] + "!";
 };
 
 // Execute
